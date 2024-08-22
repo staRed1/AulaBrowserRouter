@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState } from 'react';
+import Header from '../Componentes/Header';
+import Footer from '../Componentes/Footer';
 
-export default function ListaProduto() {
+export default function Produtos() {
     const [listaProdutos, setProdutos] = useState([
 
         {

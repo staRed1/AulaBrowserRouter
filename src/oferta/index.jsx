@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState } from 'react';
+import Header from '../Componentes/Header';
+import Footer from '../Componentes/Footer';
 
 export default function Oferta() {
     const [listaProdutos, setProdutos] = useState([
@@ -141,7 +143,7 @@ export default function Oferta() {
     ]);
 
     return(
-        <div className="Home">
+        <div className="Oferta">
             <h1> A loja dos objetos</h1>
         </div>
     )

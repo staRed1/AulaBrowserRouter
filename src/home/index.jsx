@@ -1,8 +1,11 @@
-import { useState } from "react";
-import "../globals.css"
+import { useState } from 'react';
+import Header from '../Componentes/Header';
+import Footer from '../Componentes/Footer';
+import { Carousel } from 'react-responsive-carousel';
+
 
 export default function Home() {
-    const [listaProdutos, setProdutos] = useState([
+    const [produtos, setProdutos] = useState([
 
         {
             id: 1,
