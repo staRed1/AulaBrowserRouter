@@ -2,7 +2,9 @@ import { useState } from 'react';
 import Header from '../Componentes/Header';
 import Footer from '../Componentes/Footer';
 import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
+import '../globals.css'
 
 export default function Home() {
     const [produtos, setProdutos] = useState([
@@ -56,7 +58,26 @@ export default function Home() {
 
     return(
         <div className="Home">
-            <h1> A loja dos objetos'</h1>
+            <h1 className='Titulo1'> Jogos & Cia </h1>
+            <Carousel
+                infiniteLoop
+                useKeyboardArrows
+                autoPlay
+                showArrows={true}
+                showStatus={false}
+                showThumbs={false}
+                dynamicHeight>
+
+                    <div id='carrosel-slide'>
+                      <img id='carousel-image' src='public/carrosel/vaziozinho.jpg'/>
+                      </div>
+                      <div id='carrosel-slide'>
+                      <img id='carousel-image' src='public/carrosel/flor.jpg'/>
+                      </div>
+                      <div id='carrosel-slide'>
+                      <img id='carousel-image' src='public/carrosel/zeldinha.jpg'/>
+                      </div>                      
+                </Carousel>
         </div>
     )
 }
