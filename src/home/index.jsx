@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '../Componentes/Header';
 import Footer from '../Componentes/Footer';
+import ListarProdutos from '../Componentes/ListarProdutos';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -11,73 +12,96 @@ export default function Home() {
 
         {
             id: 1,
-            nome: 'objeto 1',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/zeldaBotw.jpeg',
+            nome: 'The Legend of Zelda: Breath of the Wild',
+            genero: ' Ação/Aventura',
+            preco: "R$ 299.99",
+            empresa: "Nintendo"
+            
         },
 
         {
             id: 2,
-            nome: 'objeto 2',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/Ocarina.jpeg',
+            nome: 'The Legend of Zelda: Ocarina of Time',
+            genero: 'É um objeto',
+            preco: "R$ 199.99",
+            empresa: "Nintendo"
+            
         },
 
         {
             id: 3,
-            nome: 'objeto 3',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/majora.jpeg',
+            nome: 'The Legend of Zelda: Majoras Mask ',
+            genero: ' Ação/Aventura',
+            preco: "R$ 199.99",
+            empresa: "Nintendo"
+            
         },
 
         {
             id: 4,
-            nome: 'objeto 4',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/braço novo.jpeg',
+            nome: 'The Legend of Zelda: Tears of the kingdom',
+            genero: ' Ação/Aventura',
+            preco: "R$ 299,99",
+            empresa: "Nintendo"
+            
         },
 
         {
             id: 5,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/crepusculo.jpeg',
+            nome: 'The Legend of Zelda: Twilight Princess',
+            genero: ' Ação/Aventura',
+            preco: "R$ 249,99",
+            empresa: "Nintendo"
+            
         }
-
+        
+      
     ]);
 
     return(
         <div className="Home">
-            <h1 className='Titulo1'> Jogos & Cia </h1>
+            <Header> Jogos & Cia </Header>
             <Carousel
-                infiniteLoop
-                useKeyboardArrows
-                autoPlay
-                showArrows={true}
-                showStatus={false}
-                showThumbs={false}
-                dynamicHeight>
+                    infiniteLoop
+                    useKeyboardArrows
+                    autoPlay
+                    showArrows={true}
+                    showStatus={false}
+                    showThumbs={false}
+                    dynamicHeight>
 
                     <div id='carrosel-slide'>
-                      <img id='carousel-image' src='public/carrosel/vaziozinho.jpg'/>
+                         <img id='carousel-image' src='public/carrosel/vaziozinho.jpg'/>
                       </div>
+
                       <div id='carrosel-slide'>
-                      <img id='carousel-image' src='public/carrosel/flor.jpg'/>
+                         <img id='carousel-image' src='public/carrosel/flor.jpg'/>
                       </div>
+
                       <div id='carrosel-slide'>
-                      <img id='carousel-image' src='public/carrosel/zeldinha.jpg'/>
-                      </div>                      
+                         <img id='carousel-image' src='public/carrosel/zeldinha.jpg'/>
+                      </div>  
+
                 </Carousel>
+
+                <div>
+
+                <ListarProdutos
+                    listarProdutos={produtos}
+                    />
+
+                </div>
+
+                <div id='rodape'>
+
+                    <Footer/>
+
+                </div>
         </div>
     )
 }

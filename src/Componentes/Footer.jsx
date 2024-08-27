@@ -3,7 +3,7 @@
 export default function  Footer(){
     return(
         <footer>
-            <h1>Eu ainda não sei o que estou fazendo da minha vida</h1>
+            <h1>Por favor que esse trabalho mede pelo menos uma nota</h1>
             <nav>
                 <ul>
 

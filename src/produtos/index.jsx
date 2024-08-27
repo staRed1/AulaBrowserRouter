@@ -1,105 +1,120 @@
 import { useState } from 'react';
 import Header from '../Componentes/Header';
 import Footer from '../Componentes/Footer';
+import ListarProdutos from '../Componentes/ListarProdutos';
 
 export default function Produtos() {
     const [listaProdutos, setProdutos] = useState([
 
         {
-            id: 1,
-            nome: 'objeto 1',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+             id: 1,
+            foto:'/public/image/fazendinha.jpeg',
+            nome: 'Stardew Valley',
+            genero: 'Simulação/RPG',
+            preco: "R$74.99",
+            empresa: "Nintendo"
         },
 
         {
             id: 2,
-            nome: 'objeto 2',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/pinoquio.jpeg',
+            nome: 'Lies of P ',
+            genero: ' RPG/Ação ',
+            preco: "R$299.99",
+            empresa: " Neowiz Games"
         },
 
         {
             id: 3,
-            nome: 'objeto 3',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/parasita.jpeg',
+            nome: 'Dead Cells',
+            genero: 'Roguelike/Metroidvania',
+            preco: "R$ 41.41",
+            empresa: "Motion Twin"
         },
 
         {
             id: 4,
-            nome: 'objeto 4',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/marioMusical.jpeg',
+            nome: 'Super Mario Wonder',
+            genero: 'Plataforma/Aventura',
+            preco: "R$ 299,99",
+            empresa: "Nintendo"
         },
 
         {
             id: 5,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/marioDEchapeu.jpeg',
+            nome: 'Super Mario Odyssey',
+            genero: 'Plataforma/Aventura',
+            preco: "R$ 299,99",
+            empresa: "Nintendo"
         },
 
         {
             id: 6,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/morteVermelha.jpeg',
+            nome: 'Red Dead Redemption 2',
+            genero: ' Ação/Aventura',
+            preco: "R$ 41.41",
+            empresa: "Rockstar Games"
         },
 
         {
             id: 7,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/PapersOrDie.png',
+            nome: 'Papers, Please',
+            genero: 'Simulação/Puzzle',
+            preco: "R$ 49.99",
+            empresa: "Lucas Pope"
         },
 
         {
             id: 8,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/determinacao.jpeg',
+            nome: 'Undertale ',
+            genero: 'RPG ',
+            preco: "R$ 49.99",
+            empresa: "Toby Fox"
         },
 
         {
             id: 9,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/linbo.jpeg',
+            nome: 'Limbo',
+            genero: ' Plataforma/Puzzle',
+            preco: "R$ 49.99",
+            empresa: "Playdead"
         },
 
         {
             id: 10,
-            nome: 'objeto 5',
-            desc: 'É um objeto',
-            preco: 41.41,
-            estoque: 14,
-            tags: 'não sei o que escrever'
+            foto:'/public/image/meditacaoRen.jpeg',
+            nome: 'Deltarune ',
+            genero: 'RPG ',
+            preco: "Gratuito",
+            empresa: " Toby Fox"
         }
 
     ]);
 
     return(
-        <div className="listaProduto">
-            <h1> A loja dos objetos'</h1>
-        </div>
+        <div className="produtos">
+      <Header> Jogos & Cia </Header>
+
+            <div>
+
+            <ListarProdutos
+                listarProdutos={listaProdutos}
+                />
+
+            </div>
+
+            <div id='rodape'>
+
+                <Footer/>
+
+            </div>
+    </div>
     )
 }
